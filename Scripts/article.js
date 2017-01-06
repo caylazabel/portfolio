@@ -15,8 +15,8 @@ var content = articles;
 return templateRender(this);
 }
 
-// this.daysAgo = parseInt((new Date() - new Data(this.publishedOn))/60/60/24/1000);
-// this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
+this.daysAgo = parseInt((new Date() - new Data(this.publishedOn))/60/60/24/1000);
+this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
 
 
 projectsArray.sort(function(nextObject,currentObject) {
@@ -29,15 +29,4 @@ projectsArray.forEach(function(ele) {
 
 articles.forEach(function(a) {
   $('#articles').append(a.toHtml());
-})
-
-worksViewed.handleMainNav = function(){
-  $('.aboutme')
-  $('.nav-bar').on('click', '.nav-list', function(e){
-    e.preventDefault();
-    $('.tab-content').hide();
-    $('#' + $(this).attr('data-content')).fadeIn();
-  })
-}
-
-worksViewed.handleMainNav();
+});

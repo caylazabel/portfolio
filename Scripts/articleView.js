@@ -45,8 +45,6 @@ worksViewed.handleCategoryFilter = function() {
   });
 };
 
-
-
 worksViewed.handleMainNav = function () {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
@@ -56,9 +54,7 @@ worksViewed.handleMainNav = function () {
 };
 
 
-$(document).ready(function() {
   worksViewed.populateFilters();
   worksViewed.handleCategoryFilter();
   worksViewed.handleAuthorFilter();
   worksViewed.handleMainNav();
-});
