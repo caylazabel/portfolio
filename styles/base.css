@@ -1,27 +1,18 @@
 header {
-  background-color: black;
+  text-align: center;
   text-decoration: none;
+
 }
 
-header h2 {
-  color: white;
-  text-align: center;
-  font-size: 40px;
+img {
+  height: 300px;
+  width: 1440px;
+  border-bottom: dotted grey 5px;
 }
-.socialLinks {
-  float:right;
+.main-nav ul {
+  display: inline;
 }
+
 body {
-  background-color: black;
-  text-decoration: none;
-  color: white;
-}
 
-header ul {
-  text-align: center;
-  display: inline;
-}
-
-header li {
-  display: inline;
 }

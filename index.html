@@ -2,72 +2,65 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/base.css">
     <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+<script id="article-template" type="text/x-handlebars-template">
+        <article class ="project">
+          <h1>{{title}}</h1>
+          <h3>{{publishedOn}}</h3>
+          <h3>{{author}}</h3>
+          <p>{{body}}</p>
+          <a href="{{projectLink}}"><button>Link to Project</button></a>
+        </article>
+      </script>
   </head>
-  <header>
-<div class="socialLinks">
-
-
-
-</div>
-
-<nav class="main-nav">
-  <div class="icon-menu">
-  <ul>
-    <li><a href="#" class="tab" data-content="aboutMe">Home</a></li>
-    <li><a href="#" class="tab" data-content="skills">Skill Set</a></li>
-    <li><a href="#" class="tab" data-content="projects">Projects</a></li>
-    <li><a href="#" class="tab" data-content="contact">Contact Me</a></li>
-  </ul>
-</div>
-</nav>
-
-<h1> Cayla Zabel</h1>
-</header>
-<body>
-  <div class="tabContent" id="aboutMe">
-    <h2>About Me</h2>
-    <div>
-      <p> Aspiring web developer from Seattle Washington
-    </div>
-  </div>
-
+  <body>
+    <header>
+      <section class="heroimage"><img src="styles/img/seattlerain.jpg"></section>
+      <section class="nav-bar">
+        <h1>Cayla Zabel's Portfolio</h1>
+        <ul>
+          <li class="nav-li" data-content="projects"><a href="#" > Work </a></li>
+          <li class="nav-li" data-content="about_me"><a href="#" > About Me </a></li>
+          <li class="nav-li"><a href="github.com/caylazabel"><img src="styles/img/gitttt.png" style="width:6%; height: 6%"></a>
+          </li>
+          <li class="nav-li"><a href="http://www.linkedin.com/in/cayla-zabel-806464a4"><img src="styles/img/linkedin.png" style="width:6%; height: 6%"> </a></li>
+        </ul>
+      </section>
+    </header>
+<section class="aboutt"></section>
 <main>
-  <section id="articles">
-
-    <article class="template" data-category="category">
-
-        <h3><a href="">Title</a></h3>
-        <div class="eachWork">
-        published <time pubdate datetime="2000-01-01"> Publish Time</time>
-      </div>
-
-    <section class="article-body"></section>
-  </article>
-</section>
-</main>
-
-<div class="tabContent" id="skills">
-  <div class="mySkills">
-    <h2>Skill Set</h2>
-
-    <ul><h3><a href="#">Languages</a></h3>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
+  <section class="tab-content" id="projects"></section>
+  <section class="tab-content" id="about_me">
+    <h1>About Cayla</h1>
+    <ul>
+      <li>Skill Set</li>
+      <li>Languages</li>
+      <li>Tools</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="mySkills">
-    <ul><h2><a href="#">Tools</a><h2>
-      <li>Git</li>
-      <li>Atom</li>
-    </ul>
-  </div>
+  <!-- <nav class="main-nav">
+    <div class="icon-menu"></div>
+      <ul>
+        <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
 
-  <div class="tabContent" id="contact">
+        <li class="tab" data-content="skills"><a href="#" class="icon-checkmark">Skill Set</a></li>
+
+        <li class="tab" data-content="projects"><a href="#" class="icon-cross">Projects</a></li>
+
+        <li><a href="http://github.com/caylazabel" target="_blank" class="icon-github"> GitHub</a></li>
+      </ul> -->
+
+  <!-- <div class="tabContent" id="contact">
     <h2>Contact Me</h2>
     <ul>
       <li><a href="http://www.linkedin.com/in/cayla-zabel-806464a4"> <img src="styles/img/linkedin.png" style="width:6%; height: 6%"> </a>
@@ -75,17 +68,13 @@
       <li> <a href="https://github.com/caylazabel"> <img src="styles/img/gitttt.png" style="width:6%; height: 6%"></a>
       </li>
       <li><a href="caylazabel@gmail.com"> <img src="styles/img/emaillink.png" style="width:6%; height:6%"></a>
-      </li>
+      </li> -->
 
-
-
-
-<script
-  src="https://code.jquery.com/jquery-2.2.4.js">
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
 <script src="scripts/arrayArticles.js"></script>
 <script src="scripts/article.js"></script>
+<script src="scripts/articleView.js"></script>
 
-
+</main>
 </body>
 </html>
