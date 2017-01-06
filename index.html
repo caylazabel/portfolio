@@ -13,32 +13,41 @@
 
 
 <script id="article-template" type="text/x-handlebars-template">
-        <article>="project">
-          <h1>{{title}}</h1>
-          <h3>{{publishedOn}}</h3>
-          <p>{{{body}}}</p>
-          <a href="{{projectLink}}"><button>{{author}}</button></a>
-        </article>
-      </script>
+        <article data-author="{{author}}" data-category="{{category}}">
+          <header>
+
+          <div class="byline">
+          <address><h1><a href="{{projectLink}}">{{title}}</a></h1></address>
+          <h3>{{author}}</h3>
+          <time pubdate datetime="2000-01-01">{{publishStatus}}</time>
+        </div>
+      </header>
+      <section class="article-body">{{{body}}}</section>
+    </article>
+  </script>
   </head>
+
+
   <body>
     <header>
       <section class="heroimage"><img src="styles/img/seattlerain.jpg"></section>
-      <section class="nav-bar">
+      <nav class="main-nav">
         <h1>Cayla Zabel's Portfolio</h1>
         <ul>
-          <li class="nav-li" data-content="projects"><a href="#" > Work </a></li>
-          <li class="nav-li" data-content="about_me"><a href="#" > About Me </a></li>
-          <li class="nav-li"><a href="github.com/caylazabel"><img src="styles/img/gitttt.png" style="width:6%; height: 6%"></a>
+          <li><a href="#" class="tab" data-content="projects"> Work </a></li>
+          <li><a href="#" class="tab" data-content="about_me"> About Me </a></li>
+          <li><a href="github.com/caylazabel"><img src="styles/img/gitttt.png" style="width:6%; height: 6%"></a>
           </li>
-          <li class="nav-li"><a href="http://www.linkedin.com/in/cayla-zabel-806464a4"><img src="styles/img/linkedin.png" style="width:6%; height: 6%"> </a></li>
+          <li><a href="http://www.linkedin.com/in/cayla-zabel-806464a4"><img src="styles/img/linkedin.png" style="width:6%; height: 6%"> </a></li>
         </ul>
-      </section>
+      </nav>
     </header>
-<section class="aboutt"></section>
 <main>
-  <section class="tab-content" id="projects"></section>
+  <section class="tab-content" id="projects">
+  <!-- <article id="articles"> -->
+  </section>
   <section class="tab-content" id="about_me">
+
     <h1>About Cayla</h1>
     <ul>
       <li>Skill Set</li>
@@ -46,6 +55,11 @@
       <li>Tools</li>
     </ul>
   </section>
+  </main>
+
+  <footer>
+    &copy; 2017 Cayla Zabel | Portfolio | Happy Ipsum!
+  </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
@@ -53,6 +67,6 @@
 <script src="scripts/article.js"></script>
 <script src="scripts/articleView.js"></script>
 
-</main>
-</body>
+
+  </body>
 </html>
