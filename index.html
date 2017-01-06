@@ -2,31 +2,57 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/base.css">
     <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+
+
+
+<script id="article-template" type="text/x-handlebars-template">
+        <article>="project">
+          <h1>{{title}}</h1>
+          <h3>{{publishedOn}}</h3>
+          <p>{{{body}}}</p>
+          <a href="{{projectLink}}"><button>{{author}}</button></a>
+        </article>
+      </script>
   </head>
   <body>
-  <header>
-<a href="http://www.linkedin.com/in/cayla-zabel-806464a4"> <img src="styles/img/linkedin.png" style="width:6%; height: 6%"> </a>
-<a href="https://github.com/caylazabel"> <img src="styles/img/gitttt.png" style="width:6%; height: 6%"></a>
-<a href="caylazabel@gmail.com"> <img src="styles/img/emaillink.png" style="width:6%; height:6%"></a>
-
-<h1> Cayla Zabel</h1>
-
-</header>
-//template//
-<main>
-  <section id="articles">
-    <article class="template" data-category="projects">
-      <header>
-        <h1>Title</h1>
-        <div class="eachWork"
-        By<address><a href="">Author Name</a></address>
-      </div>
+    <header>
+      <section class="heroimage"><img src="styles/img/seattlerain.jpg"></section>
+      <section class="nav-bar">
+        <h1>Cayla Zabel's Portfolio</h1>
+        <ul>
+          <li class="nav-li" data-content="projects"><a href="#" > Work </a></li>
+          <li class="nav-li" data-content="about_me"><a href="#" > About Me </a></li>
+          <li class="nav-li"><a href="github.com/caylazabel"><img src="styles/img/gitttt.png" style="width:6%; height: 6%"></a>
+          </li>
+          <li class="nav-li"><a href="http://www.linkedin.com/in/cayla-zabel-806464a4"><img src="styles/img/linkedin.png" style="width:6%; height: 6%"> </a></li>
+        </ul>
+      </section>
     </header>
-  </article>
-</section>
+<section class="aboutt"></section>
+<main>
+  <section class="tab-content" id="projects"></section>
+  <section class="tab-content" id="about_me">
+    <h1>About Cayla</h1>
+    <ul>
+      <li>Skill Set</li>
+      <li>Languages</li>
+      <li>Tools</li>
+    </ul>
+  </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+<script src="scripts/arrayArticles.js"></script>
+<script src="scripts/article.js"></script>
+<script src="scripts/articleView.js"></script>
+
 </main>
 </body>
 </html>
