@@ -3,7 +3,7 @@
 var articles = [];
 
 function Article (works) {
-  for(var key in works){
+  for (var key in works){
     this[key] = works[key];
   }
 }
@@ -11,16 +11,17 @@ function Article (works) {
 Article.prototype.toHtml = function(){
 var source = $('#article-template').html();
 var templateRender = Handlebars.compile(source);
-var content = articles;
-return templateRender(this);
-}
 
-this.daysAgo = parseInt((new Date() - new Data(this.publishedOn))/60/60/24/1000);
+
+
+this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
 this.publishStatus = this.publishedOn ? `published ${this.daysAgo} days ago` : '(draft)';
 
+return templateRender(this);
+};
 
-projectsArray.sort(function(nextObject,currentObject) {
-  return(new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
+projectsArray.sort(function(a,b) {
+  return(new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
 projectsArray.forEach(function(ele) {
@@ -28,5 +29,5 @@ projectsArray.forEach(function(ele) {
 });
 
 articles.forEach(function(a) {
-  $('#articles').append(a.toHtml());
+  $('#projects').append(a.toHtml());
 });

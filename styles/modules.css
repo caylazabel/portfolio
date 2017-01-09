@@ -1,0 +1,18 @@
+//classes//
+
+.main-nav ul {
+  display: inline;
+  text-align: center;
+}
+
+.header-main {
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  border-bottom: solid black 5px;
+
+}
+
+.header-main h1 {
+  margin-left: 20px;
+}
