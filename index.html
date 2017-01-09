@@ -29,10 +29,13 @@
 
 
   <body>
-    <header>
-      <section class="heroimage"><img src="styles/img/seattlerain.jpg"></section>
+<div class="header-main">
+      <!-- <section class="heroimage"><img src="styles/img/seattlerain.jpg"> -->
+     <h1>Cayla Zabel</h1>
+
+    </div>
       <nav class="main-nav">
-        <h1>Cayla Zabel's Portfolio</h1>
+
         <ul>
           <li><a href="#" class="tab" data-content="projects"> Work </a></li>
           <li><a href="#" class="tab" data-content="about_me"> About Me </a></li>
@@ -41,7 +44,7 @@
           <li><a href="http://www.linkedin.com/in/cayla-zabel-806464a4"><img src="styles/img/linkedin.png" style="width:6%; height: 6%"> </a></li>
         </ul>
       </nav>
-    </header>
+
 <main>
   <section class="tab-content" id="projects">
   <!-- <article id="articles"> -->
@@ -58,15 +61,25 @@
   </main>
 
   <footer>
-    &copy; 2017 Cayla Zabel | Portfolio | Happy Ipsum!
+    <h4>&copy; 2017 Cayla Zabel | Portfolio | Happy Ipsum!</h4>
   </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
 <script src="scripts/arrayArticles.js"></script>
 <script src="scripts/article.js"></script>
 <script src="scripts/articleView.js"></script>
 
 
-  </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+
+
+<script type="text/javascript">
+  $.backstretch("styles/img/rainy.jpg", {speed: 150});
+
+</script>
+</body>
 </html>

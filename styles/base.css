@@ -4,15 +4,35 @@ header {
 
 }
 
-img {
-  height: 300px;
-  width: 1440px;
-  border-bottom: dotted grey 5px;
-}
-.main-nav ul {
-  display: inline;
+h1 {
+  /*background-repeat: no-repeat;*/
 }
 
+
 body {
-background-color: grey;
+/*background-color: grey;*/
 }
+
+html {
+  background: url(images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a {
+  color:white;
+}
+
+a:hover {
+  color:black;
+}
+
+footer {
+  border-top: solid black 5px;
+
+}
+ footer h4 {
+     margin-left: 20px;
+ }
