@@ -51,14 +51,3 @@ $.ajax({
 });
    }
  };
-// projectsArray.sort(function(a,b) {
-//   return(new Date(b.publishedOn)) - (new Date(a.publishedOn));
-// });
-//
-// projectsArray.forEach(function(ele) {
-//   articles.push(new Article(ele));
-// });
-//
-// articles.forEach(function(a) {
-//   $('#projects').append(a.toHtml());
-// });

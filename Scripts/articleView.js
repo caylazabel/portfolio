@@ -33,7 +33,7 @@ article: new Article({
   publishedOn: $('#article-published:checked').length ? new Date() : null
 });
 
-$('#articles').append(article.toHtml());
+$('#projects').append(article.toHtml());
 // $('pre code').each(function(i, block) {
 //   hljs.highlightBlock(block);
 // });
