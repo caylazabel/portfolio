@@ -4,8 +4,9 @@ header {
 
 }
 
-h1 {
-  /*background-repeat: no-repeat;*/
+h3 {
+  font-size: 30px;
+  color: white;
 }
 
 
@@ -19,10 +20,12 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 a {
   color:white;
+  font-size: 40px;
 }
 
 a:hover {
@@ -35,4 +38,15 @@ footer {
 }
  footer h4 {
      margin-left: 20px;
+ }
+ p {
+   text-align: center;
+   margin-left: 20%;
+   color: white;
+   margin-right: 20%;
+ }
+
+ time {
+   font-size: 30px;
+   color: white;
  }

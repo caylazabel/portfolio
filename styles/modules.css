@@ -1,18 +1,67 @@
 //classes//
 
-.main-nav ul {
-  display: inline;
+.header-main .main-nav ul li {
+  float: right;
+  width: 100px;
   text-align: center;
+  margin-top: 20px;
+  position: relative;
+  right: 17.5%;
+  height: 100%;
+}
+
+.main-nav {
+  list-style: none;
 }
 
 .header-main {
   font-size: 25px;
   color: white;
-  text-align: center;
   border-bottom: solid black 5px;
 
 }
 
 .header-main h1 {
-  margin-left: 20px;
+  color: white;
+  float: left;
+  font-size: 60px;
+  text-shadow: .5px .5px #FF0000;
+  position: relative;
+  left: 17.5%;
 }
+
+.pull-right {
+  height: 150px;
+  width: 250px;
+  display: block;
+  margin: auto;
+
+
+}
+.pull-center {
+  height: 125px;
+  width: 250px;
+  display: block;
+  margin: auto;
+}
+
+.pull-left {
+  height: 125px;
+  width: 275px;
+  display: block;
+  margin: auto;
+}
+
+.tab-content ul {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  list-style: none;
+}
+
+.tab-content {
+  text-align: center;
+  color: white;
+}
+
+.main-nav

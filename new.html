@@ -14,7 +14,8 @@
 
 
 <script id="article-template" type="text/x-handlebars-template">
-        <article data-author="{{author}}" data-category="{{category}}">
+        <article class="clearfix"
+        data-author="{{authorSlug}}" data-category="{{categorySlug}}">
           <header>
 
           <div class="byline">
@@ -31,7 +32,6 @@
 
   <body>
 <div class="header-main">
-      <!-- <section class="heroimage"><img src="styles/img/seattlerain.jpg"> -->
      <h1>Cayla Zabel</h1>
 
       <nav class="main-nav">
@@ -46,43 +46,58 @@
       </nav>
     </div>
 
-<main>
-  <section class="tab-content" id="projects">
-  <!-- <article id="articles"> -->
+<main class="clearfix">
+  <section id="write" class="tab-content">
+    <h1>New Article</h1>
+    <form action="#" id="new-form">
+      <label>
+        <input type="text" id="article-title" placeholder="Article title" required>
+      </label>
+      <textarea id="article-body" rows="8" cols="40" required></textarea>
+      <label>
+        <input type="text" id="article-author" placeholder="Author Name" required>
+      </label>
+      <label>
+        <input type="text" id="project-url" placeholder="Project Link" required>
+      </label>
+      <label>
+        <input type="text" id="article-category" placeholder="Category" required>
+      </label>
+      <label>
+        <input type="checkbox" id="article-published"> Published
+      </label>
+    </form>
   </section>
-  <section class="tab-content" id="about_me">
+  <section id="articles" class="tab-content">
+  </section>
 
-    <h1>About Cayla</h1>
-    <ul>
-      <li>Skill Set</li>
-      <li>Languages</li>
-      <li>Tools</li>
-    </ul>
-  </section>
+  <section id="article-export">
+    <label id="export-field" for="article-json" class="pull-right">
+      <imput type="text" readonly id="article.json">
+        When finalized, copy the above JSON, and paste into blogArticles.js
+      </label>
+    </section>
   </main>
-
   <footer>
     <h4>&copy; 2017 Cayla Zabel | Portfolio | Happy Ipsum!</h4>
   </footer>
+  </main>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-<script src="scripts/arrayArticles.js"></script>
+<!-- <script src="scripts/arrayArticles.js"></script> -->
 <script src="scripts/article.js"></script>
 <script src="scripts/articleView.js"></script>
 
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-
-
 
 <script type="text/javascript">
   $.backstretch("styles/img/rainy.jpg", {speed: 150});
 </script>
+
 <script>
-Article.fetchAll();
+worksViewed.initNewArticlePage();
 </script>
 </body>
 </html>
