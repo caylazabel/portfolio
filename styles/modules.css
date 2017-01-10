@@ -1,34 +1,26 @@
 //classes//
 
-.header-main .main-nav ul li {
+/*.header-main .main-nav ul li {
   float: right;
   width: 100px;
   text-align: center;
-  margin-top: 20px;
-  position: relative;
   right: 17.5%;
-  height: 100%;
-}
+}*/
+
+
+
+ /*.header-main h1 {
+  color: white;
+  float: left;
+  font-size: 60px;
+  text-shadow: .5px .5px #FF0000;
+  left: 17.5%;
+}*/
 
 .main-nav {
   list-style: none;
 }
 
-.header-main {
-  font-size: 25px;
-  color: white;
-  border-bottom: solid black 5px;
-
-}
-
-.header-main h1 {
-  color: white;
-  float: left;
-  font-size: 60px;
-  text-shadow: .5px .5px #FF0000;
-  position: relative;
-  left: 17.5%;
-}
 
 .pull-right {
   height: 150px;
