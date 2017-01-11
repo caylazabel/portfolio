@@ -15,13 +15,18 @@ header h1 {
   left: 10.5%;
 }
 
-header li {
-  display: inline;
+.main-nav ul li  {
+  display: inline-block;
   float: right;
   width: 100px;
   text-align: center;
   /*position: relative;*/
   right: 10.5%;
+}
+
+.main-nav ul li a {
+  display: inline-block;
+  
 }
 
 h3 {
