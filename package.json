@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "0.9.0",
+  "description": "This is my portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caylazabel/portfolio.git"
+  },
+  "keywords": [
+    "whatever"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caylazabel/portfolio/issues"
+  },
+  "homepage": "https://github.com/caylazabel/portfolio#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
