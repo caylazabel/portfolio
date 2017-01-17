@@ -1,6 +1,7 @@
 'use strict';
 
-const worksViewed = {};
+(function(module){
+ worksViewed = {};
 
 worksViewed.handleMainNav = function () {
   $('.main-nav').on('click', '.tab', function() {
@@ -49,3 +50,6 @@ worksViewed.initIndexPage = function() {
 
   worksViewed.handleMainNav();
 };
+
+module.worksViewed = worksViewed;
+})(window); 
