@@ -1,7 +1,7 @@
 'use strict';
 
 
-(fuction(contents){
+(fuction(contents) {
 function Article (works) {
 
   Object.keys(works).forEach(e => this[e] = works[e]);
@@ -23,8 +23,9 @@ return template(this);
 };
 
 Article.loadAll = rows  => {
-  rows.sort((a,b)) => (newDate(b.publishedOn)) - (newDate(a.publishedOn)));
-
+  rows.sort((a,b)) => (new Date(b.publishedOn)) - (new Date(a.publishedOn)));
+  Article.all = rows.map(ele => new Article(ele));
+};
 
 
 // Article.loadAll = function(rawData) {
@@ -34,12 +35,6 @@ Article.loadAll = rows  => {
 //
 // rawData.forEach(function(ele) {
 //   Article.all.push(new Article(ele));
-
-Article.all = rawData.map(function(ele){
-  return new Article(ele);
-  });
-};
-
 
 Article.fetchAll = callback => {
   $.get('/articles/all')
@@ -96,6 +91,14 @@ Article.numberWordsByAuthor = () => {
         })
       })
     })
+  };
+
+  Article.stats = () => {
+    return {
+      numArticles: Article.all.length,
+      numWords: Article.numberWordsAll(),
+      Authors: Article.allAuthors(),
+    }
   };
 
   Article.truncateTable = callback => {
