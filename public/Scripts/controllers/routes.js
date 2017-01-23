@@ -1,6 +1,6 @@
 'use strict';
 
-page('/', articleController.init);
+page('/', workController.init);
 page('/about', aboutController.init);
 
 
